@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Jared's Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="../../css/standard.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+	<div class="container">
+	<div th:replace="fragments/navbar :: navbar" ></div>
+
+		<!-- Show the blog post -->
+		<div class="panel panel success">
+		<div class="panel-heading">
+			<h1 th:text="*{posts.title}"></h1>
+		</div>
+		<div class="panel-body">
+			<h3 th:text="*{posts.author}"></h3>
+			<h3 th:text="*{posts.blogEntry}"></h3>
+		</div>
+	</div>
+	</div>
+
+
+<script src="../../webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!-- This will show a single post -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css"rel="stylesheet">
+
+<link href="../../css/standard.css" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	<div class="constainer">
+	<div th:each="blog:${posts}">
+		<p th:text="${blog.title}"></p>
+		<p th:text="${blog.author}"></p>
+		<p th:text="${blog.blogEntry}"></p>
+	</div>
+	
+	<p th:text="posts.title"></p>
+	</div>
+
+
+<script src="../../webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
+
+
+
+</html>

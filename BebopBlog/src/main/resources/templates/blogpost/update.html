@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+	<title>Jared's Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="../../css/update.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container">
+	<div th:replace="fragments/navbar :: navbar" ></div>
+	
+	<form th:object="${posts}" th:action="@{'/blogpost/{id}'(id=${id}) }" th:method="put">
+		
+		<div class="form-group">
+		<label>Title</label>
+			<input type="text" class="form-control" th:field="*{title}">
+		</div>
+		
+		<div class="form-group">
+		<label>Author</label>
+			<input type="text" class="form-control" th:field="*{author}">
+		</div>
+		
+		<div class="form-group">
+		<label>Blog Entry</label>
+			<input type="text" class="form-control" th:field="*{blogEntry}">
+		</div>
+		<button type="submit" class="btn btn-warning">Submit Edit</button>
+	</form>
+	
+	</div>
+
+
+
+
+<script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
+
+
+</html>
