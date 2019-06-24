@@ -1,2 +1,2 @@
 # Bebop_Blog
-Simple blog writing program to post about my favorite anime series Cowboy Bebop, written in Java.
+Simple blog writing program to post about my favorite anime series Cowboy Bebop, written in Java using Spring Boot.
